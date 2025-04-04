@@ -509,3 +509,29 @@ footer {
 .navbar-links a:hover {
     color: #ffdd57;
 }
+
+/* Add hover animation for process-step */
+.process-step {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.process-step:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+/* Add hover animation for ui-mockup */
+.ui-mockup {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.ui-mockup:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
