@@ -1,101 +1,255 @@
-:root {
-    --gradient-1: #ff6b6b;
-    --gradient-2: #4ecdc4;
-    --gradient-3: #45b7d1;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
-
 body {
-    background: #f9f9f9;
-    color: #333;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #fdf6f0, #e0e8ff);
+    /* Adjusted for better contrast */
+    color: #1e1e2f;
     line-height: 1.6;
 }
 
-.hero {
-    background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
-    padding: 100px 20px;
+header {
+    padding: 2rem;
     text-align: center;
-    color: white;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background: #ffffffcc;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+header h1 {
+    font-size: 3rem;
+    color: #5c4dff;
+    margin-bottom: 0.5rem;
 }
 
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 5rem 2rem;
+header p {
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.section {
+    padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.feature-card {
-    background: white;
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    background: #fff;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
+.feature:hover {
+    transform: translateY(-5px);
 }
 
-.icon-wrapper {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+.feature h3 {
+    color: #5c4dff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.example-preview {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.preview-box {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+}
+
+.cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #5c4dff;
+    color: #fff;
+    border-radius: 1.5rem;
+    margin: 4rem auto 2rem;
+    max-width: 800px;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta button {
+    background: #fff;
+    color: #5c4dff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta button:hover {
+    background: #d9d6ff;
+    /* Slightly darker hover effect */
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.ui-mockup {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin: 2rem 0;
+}
+
+.ui-input {
+    height: 50px;
+    background: #f5f5f7;
     border-radius: 12px;
+    margin: 1rem 0;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
+    color: #666;
 }
 
-.demo-section {
-    background: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
+.color-preview {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    height: 80px;
+    margin: 2rem 0;
 }
 
-.device-mockup {
-    max-width: 800px;
-    margin: 2rem auto;
+.color-chip {
+    border-radius: 8px;
+    background: #f5f5f7;
     position: relative;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: linear-gradient(45deg, var(--gradient-2), var(--gradient-3));
+.color-chip::after {
+    content: attr(data-color);
+    /* Dynamically set color value */
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.ui-preview {
+    border: 2px solid #f0f0f5;
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.preview-bar {
+    height: 40px;
+    background: #f5f5f7;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    counter-reset: step;
+}
+
+.process-step {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.process-step::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background: #5c4dff;
     color: white;
-    text-decoration: none;
-    border-radius: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    margin-top: 2rem;
-    transition: transform 0.3s ease;
 }
 
-.cta-button:hover {
-    transform: scale(1.05);
+.code-example {
+    background: #1e1e2f;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-family: monospace;
+    margin: 1rem 0;
 }
 
-.image-placeholder img {
-    display: block;
+/* Move inline styles to CSS */
+.bar-60 {
+    width: 60%;
+}
+
+.bar-40 {
+    width: 40%;
+}
+
+.bar-80 {
+    width: 80%;
+}
+
+/* Improve responsiveness */
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: 1fr;
+        /* Stack features on smaller screens */
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
     margin: 0 auto;
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #f9f9f9;
-}
+    padding: 4rem 2rem;
+  }
+  
+  .hero-content {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .hero-image {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
