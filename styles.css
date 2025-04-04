@@ -12,7 +12,7 @@ header {
     text-align: center;
     background: linear-gradient(90deg, #ff6b6b, #5c4dff, #4ecdc4);
     background-size: 300% 300%;
-    animation: gradientShift 12s ease infinite;
+    animation: gradientShift 15s ease infinite;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     color: #fff; /* Ensure text contrasts with the background */
@@ -34,9 +34,9 @@ header p {
 }
 
 .section {
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 0;
 }
 
 .features {
@@ -321,4 +321,189 @@ footer {
     100% {
         background-position: 0% 50%;
     }
+}
+/* Styling for the "¿Para quién es ColorFlow?" section */
+.example-preview {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.preview-box {
+    background: linear-gradient(135deg, #ffffff, #f5f5f7);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.preview-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.preview-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(92, 77, 255, 0.1), rgba(255, 107, 107, 0.1));
+    z-index: 0;
+    transition: opacity 0.3s ease;
+}
+
+.preview-box:hover::before {
+    opacity: 0.3;
+}
+
+.preview-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #5c4dff;
+    z-index: 1;
+    position: relative;
+}
+
+.preview-box strong {
+    font-size: 1.5rem;
+    color: #1e1e2f;
+    margin-bottom: 0.5rem;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+
+.preview-box p {
+    font-size: 1rem;
+    color: #666;
+    z-index: 1;
+    position: relative;
+}
+
+/* Improved Footer Styling */
+footer {
+    background: linear-gradient(135deg, #5c4dff, #4ecdc4);
+    color: #fff;
+    padding: 3rem 2rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 0 1rem;
+}
+
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.8;
+}
+
+.footer-section a {
+    color: #ffdd57;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom a {
+    color: #ffdd57;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(90deg, #ff6b6b, #5c4dff, #4ecdc4);
+    background-size: 300% 300%;
+    animation: gradientShift 15s ease infinite;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+  
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.navbar-links li {
+    display: inline;
+}
+  
+.navbar-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.3s ease;
+}
+  
+.navbar-links a:hover {
+    color: #ffdd57;
 }
