@@ -93,21 +93,23 @@ header p {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
 }
 
-/* Add a hover effect to buttons */
+/* Refined CTA button styling */
 .cta button {
-    background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
-    color: #fff;
+    background: linear-gradient(90deg, #43b1a9, #4ecdc4); /* Subtle gradient */
+    color: #ffffff;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2.5rem;
     font-size: 1rem;
-    border-radius: 0.75rem;
+    font-weight: 600;
+    border-radius: 1rem;
     cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Ensure smooth transition */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add shadow for better readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .cta button:hover {
-    transform: scale(1.1);
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
 }
 footer {
     text-align: center;
